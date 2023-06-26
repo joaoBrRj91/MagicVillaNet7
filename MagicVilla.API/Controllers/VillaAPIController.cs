@@ -12,15 +12,13 @@ namespace MagicVilla.API.Controllers
     {
 
         [HttpGet]
-        [Route("villas")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<VillaDto>))]
         public ActionResult<IEnumerable<VillaDto>> GetVillas()
             => Ok(VillaStore.VillaStorage.ToListVillaDto());
 
 
-
         [HttpGet]
-        [Route("villa")]
+        [Route("codVilla")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VillaDto))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult<VillaDto> GetVilla(string codVilla)
@@ -35,6 +33,23 @@ namespace MagicVilla.API.Controllers
 
         }
 
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VillaDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<VillaDto> CreateVilla([FromBody]VillaDto villaDto)
+        {
+            if (villaDto is null)
+                return BadRequest(villaDto);
+
+            if(!string.IsNullOrEmpty(villaDto.CodVilla))
+                return BadRequest(villaDto);
+
+            var villa = villaDto.VillaDtoToVilla();
+            VillaStore.VillaStorage.Add(villa);
+
+            return Ok(villa.VillaToVillaDto());
+        }
     }
 }
 
