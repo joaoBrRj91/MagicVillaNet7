@@ -6,17 +6,24 @@ var builder = WebApplication.CreateBuilder(args);
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
-    .WriteTo.File("log/villaLogs.text", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("debugLog/villaLogs.text", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 
 builder.Host.UseSerilog();
+
+//builder.Logging.ClearProviders().AddConsole();
 
 builder.Services.AddControllers(option =>
 {
     option.ReturnHttpNotAcceptable = false;
 
 }).AddNewtonsoftJson();
+
+
+//DI
+//builder.Services.AddSingleton<ILogging, ConsoleLogging>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
