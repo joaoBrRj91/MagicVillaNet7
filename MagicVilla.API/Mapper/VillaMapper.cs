@@ -14,23 +14,17 @@ namespace MagicVilla.API.Mapper
             => new VillaDto
             {
                 Name = villa.Name,
+                CodVilla = villa.CodVilla,
                 CreatedDate = villa.CreatedDate
             };
 
 
         public static IEnumerable<Villa> ToListVilla(this IList<VillaDto> listVillaDto)
-            => listVillaDto.Select(v => new Villa(v.Name!));
+            => listVillaDto.Select(v => v.VillaDtoToVilla());
 
 
         public static IEnumerable<VillaDto> ToListVillaDto(this IList<Villa> listVilla)
-            => listVilla
-            .Select(v =>
-            new VillaDto
-            {
-                Name = v.Name,
-                CreatedDate = v.CreatedDate
-
-            });
+            => listVilla.Select(v => v.VillaToVillaDto());
     }
 
 }

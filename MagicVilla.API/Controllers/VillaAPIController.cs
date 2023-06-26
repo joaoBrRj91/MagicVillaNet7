@@ -1,5 +1,5 @@
-﻿using MagicVilla.API.Mapper;
-using MagicVilla.API.Models;
+﻿using MagicVilla.API.Data;
+using MagicVilla.API.Mapper;
 using MagicVilla.API.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,17 +11,24 @@ namespace MagicVilla.API.Controllers
     public class VillaAPIController : ControllerBase
     {
 
-        private static IList<Villa> _villaStorage = new List<Villa>
-            {
-                new Villa("Pool View"),
-                new Villa("Beach View")
-            };
+        [HttpGet]
+        [Route("villas")]
+        public ActionResult<IEnumerable<VillaDto>> GetVillas()
+            => Ok(VillaStore.VillaStorage.ToListVillaDto());
+
 
 
         [HttpGet]
-        public ActionResult<IEnumerable<VillaDto>> GetVillas()
+        [Route("villa")]
+        public ActionResult<VillaDto> GetVilla(string codVilla)
         {
-            return Ok(_villaStorage.ToListVillaDto());
+
+            var villa = VillaStore.VillaStorage.Where(n => n.CodVilla! == codVilla).FirstOrDefault();
+
+            if (villa is not null)
+                return Ok(villa.VillaToVillaDto());
+
+            return NotFound();
         }
 
     }
