@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MagicVilla.API.Models
 {
-    public class Villa
+    public class Villa : BaseEntity
     {
         public Villa(string name)
         {
@@ -19,9 +19,6 @@ namespace MagicVilla.API.Models
 
         }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
 
         public string? Name { get; set; }
 

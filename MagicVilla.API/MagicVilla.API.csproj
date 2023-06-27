@@ -36,6 +36,8 @@
     <None Remove="Logging\Interfaces\" />
     <None Remove="Logging\Enums\" />
     <None Remove="Mapper\AutoMapper\" />
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -47,5 +49,7 @@
     <Folder Include="Logging\Interfaces\" />
     <Folder Include="Logging\Enums\" />
     <Folder Include="Mapper\AutoMapper\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Interfaces\" />
   </ItemGroup>
 </Project>

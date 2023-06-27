@@ -16,13 +16,11 @@ namespace MagicVilla.API.Controllers
     [ApiController]
     public class VillaAPIController : ControllerBase
     {
-        private readonly IGenerationLogging logging;
         private readonly ApplicationDbContext applicationDb;
         private readonly IMapper mapper;
 
-        public VillaAPIController(IGenerationLogging logging, ApplicationDbContext applicationDb, IMapper mapper)
+        public VillaAPIController(ApplicationDbContext applicationDb, IMapper mapper)
         {
-            this.logging = logging;
             this.applicationDb = applicationDb;
             this.mapper = mapper;
         }
@@ -48,11 +46,9 @@ namespace MagicVilla.API.Controllers
 
             if (villa is null)
             {
-                logging.Log($"Not found villa with {codVilla}", Logging.Enums.LogLevelCustomLogEnum.Error);
                 return NotFound();
             }
 
-            logging.Log("Response Villa", Logging.Enums.LogLevelCustomLogEnum.Info);
 
             return Ok(villa.VillaToVillaDto());
 
