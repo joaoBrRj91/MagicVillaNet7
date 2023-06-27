@@ -26,8 +26,12 @@ namespace MagicVilla.API.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<VillaDto>))]
-        public ActionResult<IEnumerable<VillaDto>> GetVillas()
-            => Ok(applicationDb.Villas.AsNoTracking().ToList().ToListVillaDto());
+        public async Task<ActionResult<IEnumerable<VillaDto>>> GetVillas()
+        {
+
+            var villas = await applicationDb.Villas.AsNoTracking().ToListAsync();
+            return Ok(villas.ToListVillaDto());
+        }
 
 
         [HttpGet]
