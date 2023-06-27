@@ -1,6 +1,7 @@
 ﻿using MagicVilla.API.Data;
 using MagicVilla.API.Logging;
 using MagicVilla.API.Logging.Interfaces;
+using MagicVilla.API.Mapper.AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
@@ -12,6 +13,8 @@ builder.Services.AddDbContextPool<ApplicationDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSqlServerConnection"));
 });
+
+builder.Services.AddAutoMapper(typeof(AutoMappingConfig));
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()

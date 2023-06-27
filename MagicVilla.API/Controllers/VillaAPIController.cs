@@ -1,4 +1,5 @@
-﻿using MagicVilla.API.Data;
+﻿using AutoMapper;
+using MagicVilla.API.Data;
 using MagicVilla.API.Logging;
 using MagicVilla.API.Logging.Interfaces;
 using MagicVilla.API.Mapper;
@@ -17,11 +18,13 @@ namespace MagicVilla.API.Controllers
     {
         private readonly IGenerationLogging logging;
         private readonly ApplicationDbContext applicationDb;
+        private readonly IMapper mapper;
 
-        public VillaAPIController(IGenerationLogging logging, ApplicationDbContext applicationDb)
+        public VillaAPIController(IGenerationLogging logging, ApplicationDbContext applicationDb, IMapper mapper)
         {
             this.logging = logging;
             this.applicationDb = applicationDb;
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -30,7 +33,7 @@ namespace MagicVilla.API.Controllers
         {
 
             var villas = await applicationDb.Villas.AsNoTracking().ToListAsync();
-            return Ok(villas.ToListVillaDto());
+            return Ok(mapper.Map<List<VillaDto>>(villas));
         }
 
 
