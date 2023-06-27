@@ -8,7 +8,7 @@ using Serilog.Sinks.SystemConsole.Themes;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<ApplicationDbContext>(option =>
+builder.Services.AddDbContextPool<ApplicationDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSqlServerConnection"));
 });

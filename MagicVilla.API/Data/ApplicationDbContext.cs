@@ -9,7 +9,7 @@ namespace MagicVilla.API.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
+            ChangeTracker.LazyLoadingEnabled = false;
         }
 
         public DbSet<Villa> Villas { get; set; }
