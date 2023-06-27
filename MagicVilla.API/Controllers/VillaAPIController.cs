@@ -55,7 +55,7 @@ namespace MagicVilla.API.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(VillaDto))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<VillaDto>> CreateVilla([FromBody]VillaDto villaDto)
+        public async Task<ActionResult<VillaDto>> CreateVilla([FromBody]VillaCreateDto villaDto)
         {
             if (villaDto is null)
                 return BadRequest(villaDto);
@@ -96,7 +96,7 @@ namespace MagicVilla.API.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdateVilla([FromBody] VillaDto villaDto)
+        public async Task<IActionResult> UpdateVilla([FromBody] VillaUpdateDto villaDto)
         {
             if (villaDto is null || string.IsNullOrEmpty(villaDto.CodVilla))
                 return BadRequest();
@@ -115,14 +115,14 @@ namespace MagicVilla.API.Controllers
         [Route("codVilla")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdatePartialVilla(string codVilla, [FromBody] JsonPatchDocument<VillaDto> patchDto)
+        public async Task<IActionResult> UpdatePartialVilla(string codVilla, [FromBody] JsonPatchDocument<VillaUpdateDto> patchDto)
         {
 
             if (patchDto is null || string.IsNullOrEmpty(codVilla))
                 return BadRequest();
 
             var villa = VillaStore.VillaStorage.Where(v => v.CodVilla == codVilla).FirstOrDefault();
-            var villaDto = villa!.VillaToVillaDto();
+            var villaDto = (VillaUpdateDto)villa!.VillaToVillaDto();
 
             patchDto.ApplyTo(villaDto);
 
