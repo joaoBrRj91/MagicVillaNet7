@@ -1,11 +1,17 @@
-﻿using MagicVilla.API.Logging;
+﻿using MagicVilla.API.Data;
+using MagicVilla.API.Logging;
 using MagicVilla.API.Logging.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSqlServerConnection"));
+});
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MagicVilla.API.Models
 {
     public class Villa
@@ -16,10 +19,30 @@ namespace MagicVilla.API.Models
 
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
+
         public string? Name { get; set; }
+
         public string? CodVilla { get; set; }
+
+        public string? Details { get; set; }
+
+        public double Rate { get; set; }
+
+        public int Sqft { get; set; }
+
+        public int Occupancy { get; set; }
+
+        public string? imageUrl { get; set; }
+
+        public string? Amenity { get; set; }
+
         public DateTime CreatedDate { get; set; }
+
+        public DateTime UodatedDate { get; set; }
+
 
         private string GeneratedCodVilla()
         {

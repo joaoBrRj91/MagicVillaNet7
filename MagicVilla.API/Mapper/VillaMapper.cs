@@ -14,8 +14,7 @@ namespace MagicVilla.API.Mapper
             => new VillaDto
             {
                 Name = villa.Name,
-                CodVilla = villa.CodVilla,
-                CreatedDate = villa.CreatedDate
+                CodVilla = villa.CodVilla
             };
 
 
