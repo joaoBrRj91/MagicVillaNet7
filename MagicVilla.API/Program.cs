@@ -1,4 +1,7 @@
-﻿using Serilog;
+﻿using MagicVilla.API.Logging;
+using MagicVilla.API.Logging.Interfaces;
+using Serilog;
+using Serilog.Sinks.SystemConsole.Themes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,8 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.File("debugLog/villaLogs.text", rollingInterval: RollingInterval.Day)
+    .WriteTo.Console(theme: AnsiConsoleTheme.Literate)
     .CreateLogger();
 
+/*Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console().CreateLogger();*/
 
 builder.Host.UseSerilog();
 
@@ -22,7 +28,7 @@ builder.Services.AddControllers(option =>
 
 
 //DI
-//builder.Services.AddSingleton<ILogging, ConsoleLogging>();
+builder.Services.AddSingleton<IGenerationLogging, ConsoleLog>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -42,6 +48,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseSerilogRequestLogging();
 
 app.Run();
 

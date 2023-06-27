@@ -1,4 +1,6 @@
 ﻿using MagicVilla.API.Data;
+using MagicVilla.API.Logging;
+using MagicVilla.API.Logging.Interfaces;
 using MagicVilla.API.Mapper;
 using MagicVilla.API.Models;
 using MagicVilla.API.Models.Dto;
@@ -12,6 +14,12 @@ namespace MagicVilla.API.Controllers
     [ApiController]
     public class VillaAPIController : ControllerBase
     {
+        private readonly IGenerationLogging logging;
+
+        public VillaAPIController(IGenerationLogging logging)
+        {
+            this.logging = logging;
+        }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<VillaDto>))]
@@ -25,11 +33,16 @@ namespace MagicVilla.API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult<VillaDto> GetVilla(string codVilla)
         {
-            
+
             var villa = VillaStore.VillaStorage.Where(n => n.CodVilla! == codVilla).FirstOrDefault();
 
             if (villa is null)
+            {
+                logging.Log($"Not found villa with {codVilla}", Logging.Enums.LogLevelCustomLogEnum.Error);
                 return NotFound();
+            }
+
+            logging.Log("Response Villa", Logging.Enums.LogLevelCustomLogEnum.Info);
 
             return Ok(villa.VillaToVillaDto());
 
