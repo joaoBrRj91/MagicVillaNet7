@@ -5,12 +5,12 @@ using MagicVilla.API.Repositories.Interfaces;
 
 namespace MagicVilla.API.Repositories
 {
-	public class VillaRepository :  BaseRepository<Villa>, IVillaRepository
+    public class VillaRepository : BaseRepository<Villa>, IVillaRepository
     {
-		public VillaRepository(ApplicationDbContext applicationDb) : base(applicationDb)
-		{
-		}
-		
-	}
+        public VillaRepository(ApplicationDbContext applicationDb) : base(applicationDb)
+        {
+        }
+
+    }
 }
 

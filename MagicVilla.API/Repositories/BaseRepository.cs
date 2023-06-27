@@ -22,7 +22,7 @@ namespace MagicVilla.API.Repositories
             await applicationDb.Set<T>().AddAsync(entity);
         }
 
-        public async Task<T> GetAsync(Expression<Func<T, bool>>? filter, bool asTracking = false)
+        public async Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool asTracking = false)
         {
             IQueryable<T> query = applicationDb.Set<T>();
 
@@ -35,7 +35,7 @@ namespace MagicVilla.API.Repositories
             return entity!;
         }
 
-        public  async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter)
+        public  async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
         {
             IQueryable<T> query = applicationDb.Set<T>();
 

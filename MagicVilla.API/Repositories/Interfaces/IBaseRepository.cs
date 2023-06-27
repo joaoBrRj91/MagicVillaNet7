@@ -6,8 +6,8 @@ namespace MagicVilla.API.Repositories.Interfaces
 {
 	public interface IBaseRepository<T> where T : BaseEntity
     {
-		Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter);
-        Task<T> GetAsync(Expression<Func<T, bool>>? filter, bool asTracking = false);
+		Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null);
+        Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool asTracking = false);
         Task CreateAsync(T entity);
         Task UpdateAsync(T entity);
         Task RemoveAsync(T entity);
