@@ -2391,3 +2391,7 @@ FROM [Villas] AS [v]
 2023-06-27 20:41:31.532 -03:00 [INF] HTTP GET /api/villaAPI responded 200 in 1123.5445 ms
 2023-06-27 20:41:31.532 -03:00 [DBG] Connection id "0HMRNCV51P26V" completed keep alive response.
 2023-06-27 20:41:31.534 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/api/villaAPI - - - 200 1987 application/json;+charset=utf-8 1161.9347ms
+2023-06-27 20:43:26.659 -03:00 [DBG] Connection id "0HMRNCV51P26V" received FIN.
+2023-06-27 20:43:26.710 -03:00 [DBG] Connection id "0HMRNCV51P26V" disconnecting.
+2023-06-27 20:43:26.712 -03:00 [DBG] Connection id "0HMRNCV51P26V" sending FIN because: "The client closed the connection."
+2023-06-27 20:43:26.718 -03:00 [DBG] Connection id "0HMRNCV51P26V" stopped.

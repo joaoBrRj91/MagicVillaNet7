@@ -38,6 +38,8 @@
     <None Remove="Mapper\AutoMapper\" />
     <None Remove="Repositories\" />
     <None Remove="Repositories\Interfaces\" />
+    <None Remove="Models\Response\" />
+    <None Remove="Models\Response\Interface\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -51,5 +53,7 @@
     <Folder Include="Mapper\AutoMapper\" />
     <Folder Include="Repositories\" />
     <Folder Include="Repositories\Interfaces\" />
+    <Folder Include="Models\Response\" />
+    <Folder Include="Models\Response\Interface\" />
   </ItemGroup>
 </Project>
