@@ -41,6 +41,12 @@ namespace MagicVilla.API.Models
         public DateTime UodatedDate { get; set; }
 
 
+        [ForeignKey("VillaNumber")]
+        public Guid VillaNumberId { get; set; } 
+
+        public VillaNumber VillaNumber { get; set; }
+
+
         private string GeneratedCodVilla()
         {
             var randomCodVilla = $"{Name!.ToUpper()}-{new Random().NextInt64()}";

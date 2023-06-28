@@ -21,6 +21,8 @@ namespace MagicVilla.API.Models
         public ushort VillaNo { get; set; }
 
 		public string SpecialDetails { get; set; }
-	}
+
+        public Villa Villa { get; set; }
+    }
 }
 

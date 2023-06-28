@@ -4,6 +4,7 @@ using MagicVilla.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230628220505_OptionalColumVillaNumberId2")]
+    partial class OptionalColumVillaNumberId2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,7 +58,7 @@ namespace MagicVilla.API.Migrations
                     b.Property<DateTime>("UodatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("VillaNumberId")
+                    b.Property<Guid?>("VillaNumberId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("imageUrl")
@@ -63,27 +66,7 @@ namespace MagicVilla.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("VillaNumberId")
-                        .IsUnique();
-
                     b.ToTable("Villas");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("233bbcfe-1bdb-4314-82ab-12885ad3e778"),
-                            Amenity = "",
-                            CodVilla = "ROYAL VILLA-6824952426154566397",
-                            CreatedDate = new DateTime(2023, 6, 28, 19, 31, 29, 390, DateTimeKind.Local).AddTicks(1440),
-                            Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Name = "Royal Villa",
-                            Occupancy = 4,
-                            Rate = 200.0,
-                            Sqft = 550,
-                            UodatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            VillaNumberId = new Guid("95ca3dfb-8ffe-430e-9e3d-da2b4b6f9486"),
-                            imageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa3.jpg"
-                        });
                 });
 
             modelBuilder.Entity("MagicVilla.API.Models.VillaNumber", b =>
@@ -105,23 +88,6 @@ namespace MagicVilla.API.Migrations
                         .IsUnique();
 
                     b.ToTable("VillaNumbers");
-                });
-
-            modelBuilder.Entity("MagicVilla.API.Models.Villa", b =>
-                {
-                    b.HasOne("MagicVilla.API.Models.VillaNumber", "VillaNumber")
-                        .WithOne("Villa")
-                        .HasForeignKey("MagicVilla.API.Models.Villa", "VillaNumberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("VillaNumber");
-                });
-
-            modelBuilder.Entity("MagicVilla.API.Models.VillaNumber", b =>
-                {
-                    b.Navigation("Villa")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
