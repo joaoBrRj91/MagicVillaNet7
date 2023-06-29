@@ -3890,3 +3890,284 @@ VALUES (N'20230628223129_Teste', N'7.0.8');
 2023-06-28 19:34:12.650 -03:00 [DBG] Disposing transaction.
 2023-06-28 19:34:12.651 -03:00 [DBG] Closing connection to database 'udemy_bhrugen' on server 'localhost'.
 2023-06-28 19:34:12.651 -03:00 [DBG] Closed connection to database 'udemy_bhrugen' on server 'localhost' (0ms).
+2023-06-28 21:07:28.865 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-28 21:07:29.045 -03:00 [DBG] Hosting starting
+2023-06-28 21:07:29.858 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-06-28 21:07:29.904 -03:00 [INF] Now listening on: https://localhost:7293
+2023-06-28 21:07:29.905 -03:00 [INF] Now listening on: http://localhost:5108
+2023-06-28 21:07:29.905 -03:00 [DBG] Loaded hosting startup assembly MagicVilla.API
+2023-06-28 21:07:29.906 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-28 21:07:29.907 -03:00 [INF] Hosting environment: Development
+2023-06-28 21:07:29.907 -03:00 [INF] Content root path: /Users/joaonascimento/Desenvolvimento/Estudos 2023/dotnet/udemy/webApiNet7CompleteGuide/Project/MagicVilla/MagicVilla.API
+2023-06-28 21:07:29.907 -03:00 [DBG] Hosting started
+2023-06-28 21:07:29.950 -03:00 [DBG] Connection id "0HMRO6JA5O6SD" accepted.
+2023-06-28 21:07:29.953 -03:00 [DBG] Connection id "0HMRO6JA5O6SD" started.
+2023-06-28 21:07:30.939 -03:00 [DBG] Connection id "0HMRO6JA5O6SD" received FIN.
+2023-06-28 21:07:30.955 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-28 21:07:31.024 -03:00 [DBG] Connection id "0HMRO6JA5O6SD" stopped.
+2023-06-28 21:07:31.030 -03:00 [DBG] Connection id "0HMRO6JA5O6SD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-28 21:07:31.366 -03:00 [DBG] Connection id "0HMRO6JA5O6SE" accepted.
+2023-06-28 21:07:31.368 -03:00 [DBG] Connection id "0HMRO6JA5O6SE" started.
+2023-06-28 21:07:31.387 -03:00 [DBG] Connection id "0HMRO6JA5O6SF" accepted.
+2023-06-28 21:07:31.389 -03:00 [DBG] Connection id "0HMRO6JA5O6SF" started.
+2023-06-28 21:07:31.515 -03:00 [DBG] Connection 0HMRO6JA5O6SE established using the following protocol: "Tls12"
+2023-06-28 21:07:31.516 -03:00 [DBG] Connection 0HMRO6JA5O6SF established using the following protocol: "Tls12"
+2023-06-28 21:07:31.677 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/index.html - -
+2023-06-28 21:07:31.680 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-06-28 21:07:31.738 -03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-06-28 21:07:31.750 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:07:31.996 -03:00 [DBG] Connection id "0HMRO6JA5O6SF" completed keep alive response.
+2023-06-28 21:07:32.001 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/index.html - - - 200 - text/html;charset=utf-8 329.1189ms
+2023-06-28 21:07:32.043 -03:00 [DBG] Connection id "0HMRO6JA5O6SE" received FIN.
+2023-06-28 21:07:32.043 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/swagger-ui.css - -
+2023-06-28 21:07:32.045 -03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-06-28 21:07:32.045 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:07:32.047 -03:00 [DBG] Connection id "0HMRO6JA5O6SE" sending FIN because: "The client closed the connection."
+2023-06-28 21:07:32.048 -03:00 [DBG] Connection id "0HMRO6JA5O6SE" disconnecting.
+2023-06-28 21:07:32.075 -03:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2023-06-28 21:07:32.079 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-06-28 21:07:32.080 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/swagger-ui.css - - - 0 144929 text/css 36.6777ms
+2023-06-28 21:07:32.085 -03:00 [DBG] Connection id "0HMRO6JA5O6SE" stopped.
+2023-06-28 21:07:32.222 -03:00 [DBG] Connection id "0HMRO6JA5O6SF" received FIN.
+2023-06-28 21:07:32.223 -03:00 [DBG] Connection id "0HMRO6JA5O6SF" sending FIN because: "The client closed the connection."
+2023-06-28 21:07:32.224 -03:00 [DBG] Connection id "0HMRO6JA5O6SF" disconnecting.
+2023-06-28 21:07:32.226 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/favicon-32x32.png - -
+2023-06-28 21:07:32.226 -03:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-06-28 21:07:32.226 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:07:32.231 -03:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2023-06-28 21:07:32.232 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-06-28 21:07:32.233 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/favicon-32x32.png - - - 0 628 image/png 6.5685ms
+2023-06-28 21:07:32.234 -03:00 [DBG] Connection id "0HMRO6JA5O6SF" stopped.
+2023-06-28 21:07:32.297 -03:00 [DBG] Connection id "0HMRO6JA5O6SG" accepted.
+2023-06-28 21:07:32.298 -03:00 [DBG] Connection id "0HMRO6JA5O6SG" started.
+2023-06-28 21:07:32.361 -03:00 [DBG] Connection 0HMRO6JA5O6SG established using the following protocol: "Tls12"
+2023-06-28 21:07:32.362 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/v1/swagger.json - -
+2023-06-28 21:07:32.363 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-06-28 21:07:32.363 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:07:32.654 -03:00 [DBG] Connection id "0HMRO6JA5O6SG" completed keep alive response.
+2023-06-28 21:07:32.654 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 291.6030ms
+2023-06-28 21:09:31.841 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-28 21:09:31.998 -03:00 [DBG] Hosting starting
+2023-06-28 21:09:32.828 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-06-28 21:09:32.929 -03:00 [INF] Now listening on: https://localhost:7293
+2023-06-28 21:09:32.929 -03:00 [INF] Now listening on: http://localhost:5108
+2023-06-28 21:09:32.930 -03:00 [DBG] Loaded hosting startup assembly MagicVilla.API
+2023-06-28 21:09:32.966 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-28 21:09:32.992 -03:00 [INF] Hosting environment: Development
+2023-06-28 21:09:32.998 -03:00 [INF] Content root path: /Users/joaonascimento/Desenvolvimento/Estudos 2023/dotnet/udemy/webApiNet7CompleteGuide/Project/MagicVilla/MagicVilla.API
+2023-06-28 21:09:32.998 -03:00 [DBG] Hosting started
+2023-06-28 21:09:33.017 -03:00 [DBG] Connection id "0HMRO6KERDF07" accepted.
+2023-06-28 21:09:33.019 -03:00 [DBG] Connection id "0HMRO6KERDF07" started.
+2023-06-28 21:09:33.886 -03:00 [DBG] Connection id "0HMRO6KERDF07" received FIN.
+2023-06-28 21:09:33.899 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-28 21:09:33.991 -03:00 [DBG] Connection id "0HMRO6KERDF07" stopped.
+2023-06-28 21:09:33.996 -03:00 [DBG] Connection id "0HMRO6KERDF07" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-28 21:09:34.205 -03:00 [DBG] Connection id "0HMRO6KERDF08" accepted.
+2023-06-28 21:09:34.207 -03:00 [DBG] Connection id "0HMRO6KERDF08" received FIN.
+2023-06-28 21:09:34.207 -03:00 [DBG] Connection id "0HMRO6KERDF08" started.
+2023-06-28 21:09:34.207 -03:00 [DBG] Connection id "0HMRO6KERDF09" accepted.
+2023-06-28 21:09:34.232 -03:00 [DBG] Connection id "0HMRO6KERDF09" started.
+2023-06-28 21:09:34.304 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-28 21:09:34.306 -03:00 [DBG] Connection id "0HMRO6KERDF08" stopped.
+2023-06-28 21:09:34.331 -03:00 [DBG] Connection id "0HMRO6KERDF08" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-28 21:09:34.382 -03:00 [DBG] Connection 0HMRO6KERDF09 established using the following protocol: "Tls12"
+2023-06-28 21:09:34.539 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/index.html - -
+2023-06-28 21:09:34.542 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-06-28 21:09:34.608 -03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-06-28 21:09:34.609 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:09:34.778 -03:00 [DBG] Connection id "0HMRO6KERDF09" completed keep alive response.
+2023-06-28 21:09:34.780 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/index.html - - - 200 - text/html;charset=utf-8 246.3759ms
+2023-06-28 21:09:34.805 -03:00 [DBG] Connection id "0HMRO6KERDF09" received FIN.
+2023-06-28 21:09:34.808 -03:00 [DBG] Connection id "0HMRO6KERDF09" sending FIN because: "The client closed the connection."
+2023-06-28 21:09:34.808 -03:00 [DBG] Connection id "0HMRO6KERDF09" disconnecting.
+2023-06-28 21:09:34.818 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/swagger-ui.css - -
+2023-06-28 21:09:34.819 -03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-06-28 21:09:34.819 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:09:34.858 -03:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2023-06-28 21:09:34.863 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-06-28 21:09:34.864 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/swagger-ui.css - - - 0 144929 text/css 46.1026ms
+2023-06-28 21:09:34.872 -03:00 [DBG] Connection id "0HMRO6KERDF09" stopped.
+2023-06-28 21:09:34.992 -03:00 [DBG] Connection id "0HMRO6KERDF0A" accepted.
+2023-06-28 21:09:34.992 -03:00 [DBG] Connection id "0HMRO6KERDF0A" started.
+2023-06-28 21:09:34.995 -03:00 [DBG] Connection id "0HMRO6KERDF0A" received FIN.
+2023-06-28 21:09:35.028 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-28 21:09:35.029 -03:00 [DBG] Connection id "0HMRO6KERDF0A" stopped.
+2023-06-28 21:09:35.030 -03:00 [DBG] Connection id "0HMRO6KERDF0A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-28 21:09:35.062 -03:00 [DBG] Connection id "0HMRO6KERDF0B" accepted.
+2023-06-28 21:09:35.063 -03:00 [DBG] Connection id "0HMRO6KERDF0B" started.
+2023-06-28 21:09:35.111 -03:00 [DBG] Connection 0HMRO6KERDF0B established using the following protocol: "Tls12"
+2023-06-28 21:09:35.131 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/v1/swagger.json - -
+2023-06-28 21:09:35.131 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-06-28 21:09:35.132 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:09:35.527 -03:00 [DBG] Connection id "0HMRO6KERDF0B" completed keep alive response.
+2023-06-28 21:09:35.527 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 396.4900ms
+2023-06-28 21:12:17.031 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-28 21:12:17.193 -03:00 [DBG] Hosting starting
+2023-06-28 21:12:17.878 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-06-28 21:12:17.940 -03:00 [INF] Now listening on: https://localhost:7293
+2023-06-28 21:12:17.940 -03:00 [INF] Now listening on: http://localhost:5108
+2023-06-28 21:12:17.940 -03:00 [DBG] Loaded hosting startup assembly MagicVilla.API
+2023-06-28 21:12:17.977 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-28 21:12:17.987 -03:00 [INF] Hosting environment: Development
+2023-06-28 21:12:17.987 -03:00 [INF] Content root path: /Users/joaonascimento/Desenvolvimento/Estudos 2023/dotnet/udemy/webApiNet7CompleteGuide/Project/MagicVilla/MagicVilla.API
+2023-06-28 21:12:17.988 -03:00 [DBG] Hosting started
+2023-06-28 21:12:18.005 -03:00 [DBG] Connection id "0HMRO6M00RQTP" accepted.
+2023-06-28 21:12:18.007 -03:00 [DBG] Connection id "0HMRO6M00RQTP" started.
+2023-06-28 21:12:18.931 -03:00 [DBG] Connection id "0HMRO6M00RQTP" received FIN.
+2023-06-28 21:12:18.947 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-28 21:12:19.067 -03:00 [DBG] Connection id "0HMRO6M00RQTP" stopped.
+2023-06-28 21:12:19.076 -03:00 [DBG] Connection id "0HMRO6M00RQTP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-28 21:12:19.119 -03:00 [DBG] Connection id "0HMRO6M00RQTQ" accepted.
+2023-06-28 21:12:19.142 -03:00 [DBG] Connection id "0HMRO6M00RQTQ" started.
+2023-06-28 21:12:19.144 -03:00 [DBG] Connection id "0HMRO6M00RQTR" accepted.
+2023-06-28 21:12:19.144 -03:00 [DBG] Connection id "0HMRO6M00RQTR" started.
+2023-06-28 21:12:19.237 -03:00 [DBG] Connection 0HMRO6M00RQTR established using the following protocol: "Tls12"
+2023-06-28 21:12:19.237 -03:00 [DBG] Connection 0HMRO6M00RQTQ established using the following protocol: "Tls12"
+2023-06-28 21:12:19.365 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/index.html - -
+2023-06-28 21:12:19.371 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-06-28 21:12:19.429 -03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-06-28 21:12:19.429 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:12:19.648 -03:00 [DBG] Connection id "0HMRO6M00RQTR" completed keep alive response.
+2023-06-28 21:12:19.651 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/index.html - - - 200 - text/html;charset=utf-8 290.8624ms
+2023-06-28 21:12:19.677 -03:00 [DBG] Connection id "0HMRO6M00RQTR" received FIN.
+2023-06-28 21:12:19.678 -03:00 [DBG] Connection id "0HMRO6M00RQTR" sending FIN because: "The client closed the connection."
+2023-06-28 21:12:19.679 -03:00 [DBG] Connection id "0HMRO6M00RQTR" disconnecting.
+2023-06-28 21:12:19.686 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/swagger-ui.css - -
+2023-06-28 21:12:19.686 -03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-06-28 21:12:19.686 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:12:19.703 -03:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2023-06-28 21:12:19.705 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-06-28 21:12:19.707 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/swagger-ui.css - - - 0 144929 text/css 20.6437ms
+2023-06-28 21:12:19.710 -03:00 [DBG] Connection id "0HMRO6M00RQTR" stopped.
+2023-06-28 21:12:19.819 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/favicon-32x32.png - -
+2023-06-28 21:12:19.820 -03:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-06-28 21:12:19.820 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:12:19.823 -03:00 [DBG] Connection id "0HMRO6M00RQTQ" received FIN.
+2023-06-28 21:12:19.823 -03:00 [DBG] Connection id "0HMRO6M00RQTQ" sending FIN because: "The client closed the connection."
+2023-06-28 21:12:19.823 -03:00 [DBG] Connection id "0HMRO6M00RQTQ" disconnecting.
+2023-06-28 21:12:19.824 -03:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2023-06-28 21:12:19.825 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-06-28 21:12:19.826 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/favicon-32x32.png - - - 0 628 image/png 6.2926ms
+2023-06-28 21:12:19.826 -03:00 [DBG] Connection id "0HMRO6M00RQTQ" stopped.
+2023-06-28 21:12:19.864 -03:00 [DBG] Connection id "0HMRO6M00RQTS" accepted.
+2023-06-28 21:12:19.865 -03:00 [DBG] Connection id "0HMRO6M00RQTS" started.
+2023-06-28 21:12:19.913 -03:00 [DBG] Connection 0HMRO6M00RQTS established using the following protocol: "Tls12"
+2023-06-28 21:12:19.919 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/swagger/v1/swagger.json - -
+2023-06-28 21:12:19.920 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-06-28 21:12:19.920 -03:00 [DBG] Request did not match any endpoints
+2023-06-28 21:12:20.167 -03:00 [DBG] Connection id "0HMRO6M00RQTS" completed keep alive response.
+2023-06-28 21:12:20.167 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 247.6202ms
+2023-06-28 21:12:48.106 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7293/api/villaAPI - -
+2023-06-28 21:12:48.111 -03:00 [DBG] 1 candidate(s) found for the request path '/api/villaAPI'
+2023-06-28 21:12:48.115 -03:00 [DBG] Endpoint 'MagicVilla.API.Controllers.VillaAPIController.GetVillas (MagicVilla.API)' with route pattern 'api/villaAPI' is valid for the request path '/api/villaAPI'
+2023-06-28 21:12:48.116 -03:00 [DBG] Request matched endpoint 'MagicVilla.API.Controllers.VillaAPIController.GetVillas (MagicVilla.API)'
+2023-06-28 21:12:48.116 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-06-28 21:12:48.123 -03:00 [INF] Executing endpoint 'MagicVilla.API.Controllers.VillaAPIController.GetVillas (MagicVilla.API)'
+2023-06-28 21:12:48.144 -03:00 [INF] Route matched with {action = "GetVillas", controller = "VillaAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MagicVilla.API.Models.Dto.VillaDto]]] GetVillas() on controller MagicVilla.API.Controllers.VillaAPIController (MagicVilla.API).
+2023-06-28 21:12:48.145 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-28 21:12:48.146 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-28 21:12:48.146 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-28 21:12:48.146 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-28 21:12:48.146 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-28 21:12:48.148 -03:00 [DBG] Executing controller factory for controller MagicVilla.API.Controllers.VillaAPIController (MagicVilla.API)
+2023-06-28 21:12:48.311 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-06-28 21:12:49.129 -03:00 [DBG] Entity Framework Core 7.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.8' with options: MaxPoolSize=1024 
+2023-06-28 21:12:49.254 -03:00 [DBG] Executed controller factory for controller MagicVilla.API.Controllers.VillaAPIController (MagicVilla.API)
+2023-06-28 21:12:49.258 -03:00 [INF] TESTE
+2023-06-28 21:12:49.351 -03:00 [DBG] Compiling query expression: 
+'DbSet<Villa>()'
+2023-06-28 21:12:49.538 -03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Villa>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Villa.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Villa.Amenity (string), 1], [Property: Villa.CodVilla (string), 2], [Property: Villa.CreatedDate (DateTime) Required, 3], [Property: Villa.Details (string), 4], [Property: Villa.Name (string), 5], [Property: Villa.Occupancy (int) Required, 6], [Property: Villa.Rate (double) Required, 7], [Property: Villa.Sqft (int) Required, 8], [Property: Villa.UodatedDate (DateTime) Required, 9], [Property: Villa.VillaNumberId (Guid) Required FK Index, 10], [Property: Villa.imageUrl (string), 11] }
+        SELECT v.Id, v.Amenity, v.CodVilla, v.CreatedDate, v.Details, v.Name, v.Occupancy, v.Rate, v.Sqft, v.UodatedDate, v.VillaNumberId, v.imageUrl
+        FROM Villas AS v), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Villa>, 
+    MagicVilla.API.Data.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2023-06-28 21:12:49.574 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-28 21:12:49.577 -03:00 [DBG] Creating DbConnection.
+2023-06-28 21:12:49.642 -03:00 [DBG] Created DbConnection. (60ms).
+2023-06-28 21:12:49.653 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (76ms).
+2023-06-28 21:12:49.656 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (84ms).
+2023-06-28 21:12:49.662 -03:00 [DBG] Opening connection to database 'udemy_bhrugen' on server 'localhost'.
+2023-06-28 21:12:50.146 -03:00 [DBG] Opened connection to database 'udemy_bhrugen' on server 'localhost'.
+2023-06-28 21:12:50.157 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[Amenity], [v].[CodVilla], [v].[CreatedDate], [v].[Details], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqft], [v].[UodatedDate], [v].[VillaNumberId], [v].[imageUrl]
+FROM [Villas] AS [v]
+2023-06-28 21:12:50.258 -03:00 [INF] Executed DbCommand (103ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[Amenity], [v].[CodVilla], [v].[CreatedDate], [v].[Details], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqft], [v].[UodatedDate], [v].[VillaNumberId], [v].[imageUrl]
+FROM [Villas] AS [v]
+2023-06-28 21:12:50.294 -03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Villa' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-28 21:12:50.342 -03:00 [DBG] Closing data reader to 'udemy_bhrugen' on server 'localhost'.
+2023-06-28 21:12:50.350 -03:00 [DBG] A data reader for 'udemy_bhrugen' on server 'localhost' is being disposed after spending 85ms reading results.
+2023-06-28 21:12:50.354 -03:00 [DBG] Closing connection to database 'udemy_bhrugen' on server 'localhost'.
+2023-06-28 21:12:50.361 -03:00 [DBG] Closed connection to database 'udemy_bhrugen' on server 'localhost' (7ms).
+2023-06-28 21:12:50.389 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2023-06-28 21:12:50.393 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-06-28 21:12:50.397 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-06-28 21:12:50.398 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-28 21:12:50.398 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-28 21:12:50.399 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-06-28 21:12:50.400 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagicVilla.API.Models.Dto.VillaDto, MagicVilla.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-28 21:12:50.576 -03:00 [INF] Executed action MagicVilla.API.Controllers.VillaAPIController.GetVillas (MagicVilla.API) in 2425.778ms
+2023-06-28 21:12:50.577 -03:00 [INF] Executed endpoint 'MagicVilla.API.Controllers.VillaAPIController.GetVillas (MagicVilla.API)'
+2023-06-28 21:12:50.580 -03:00 [INF] HTTP GET /api/villaAPI responded 200 in 2456.9253 ms
+2023-06-28 21:12:50.583 -03:00 [DBG] Connection id "0HMRO6M00RQTS" completed keep alive response.
+2023-06-28 21:12:50.596 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7293/api/villaAPI - - - 200 360 application/json;+charset=utf-8 2495.8186ms

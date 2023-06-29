@@ -1,7 +1,5 @@
-﻿using System;
-using MagicVilla.API.Logging.Enums;
+﻿using System.Text;
 using MagicVilla.API.Logging.Interfaces;
-using Microsoft.AspNetCore.Mvc;
 
 namespace MagicVilla.API.Logging
 {
@@ -14,16 +12,25 @@ namespace MagicVilla.API.Logging
             this.logger = logger;
         }
 
-        public void Log(string mensage, LogLevelCustomLogEnum logLevelCustomLog)
+        public string FormatLogLevelMessage(LogLevel logLevel)
+            => $"==== {logLevel} ====";
+
+        public void Log(string mensage, LogLevel logLevel, string? responseResult = null)
         {
 
-            if (logLevelCustomLog == LogLevelCustomLogEnum.Info)
-                logger.LogInformation(mensage);
+            logger.Log(logLevel, FormatLogLevelMessage(logLevel));
 
-            if (logLevelCustomLog == LogLevelCustomLogEnum.Error)
-                logger.LogError(mensage);
+            var finalMessageLog = new StringBuilder();
+            finalMessageLog.AppendLine($"Message : {mensage}");
+            finalMessageLog.AppendLine($"Response Result : {responseResult ?? "Process dont produce response"}");
+
+
+            logger.Log(logLevel, finalMessageLog.ToString());
 
         }
+
+        
+        
     }
 }
 

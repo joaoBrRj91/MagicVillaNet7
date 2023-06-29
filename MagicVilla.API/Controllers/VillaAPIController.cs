@@ -1,8 +1,5 @@
-﻿using AutoMapper;
-using MagicVilla.API.Mapper;
-using MagicVilla.API.Models.Dto;
-using MagicVilla.API.Repositories.Interfaces;
-using Microsoft.AspNetCore.JsonPatch;
+﻿using MagicVilla.API.Models.Response.Interface;
+using MagicVilla.API.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MagicVilla.API.Controllers
@@ -12,26 +9,22 @@ namespace MagicVilla.API.Controllers
     [ApiController]
     public class VillaAPIController : ControllerBase
     {
-        private readonly IVillaRepository villaRepository;
-        private readonly IMapper mapper;
+        private readonly IVillaService villaService;
 
-        public VillaAPIController(IVillaRepository villaRepository, IMapper mapper)
-        {
-            this.villaRepository = villaRepository;
-            this.mapper = mapper;
-        }
+        public VillaAPIController(IVillaService villaService) => this.villaService = villaService;
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<VillaDto>))]
-        public async Task<ActionResult<IEnumerable<VillaDto>>> GetVillas()
+        //[ProducesResponseType(StatusCodes.Status200OK,Type = typeof(IResponse))]
+        public async Task<ActionResult<IResponse>> GetVillas()
         {
 
-            var villas = await villaRepository.GetAllAsync();
-            return Ok(mapper.Map<List<VillaDto>>(villas));
+            var response = await villaService.GetVillaDtosAsync();
+            return Ok(response);
         }
 
+        #region Other Methods
 
-        [HttpGet]
+        /*[HttpGet]
         [Route("codVilla")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VillaDto))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -132,9 +125,9 @@ namespace MagicVilla.API.Controllers
             await villaRepository.SaveChangesAysnc();
 
             return NoContent();
-        }
+        }*/
 
-
+        #endregion
     }
 }
 

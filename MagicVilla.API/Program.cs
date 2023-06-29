@@ -4,6 +4,8 @@ using MagicVilla.API.Logging.Interfaces;
 using MagicVilla.API.Mapper.AutoMapper;
 using MagicVilla.API.Repositories;
 using MagicVilla.API.Repositories.Interfaces;
+using MagicVilla.API.Services;
+using MagicVilla.API.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
@@ -19,8 +21,8 @@ builder.Services.AddDbContextPool<ApplicationDbContext>(option =>
 builder.Services.AddAutoMapper(typeof(AutoMappingConfig));
 
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Debug()
-    .WriteTo.File("debugLog/villaLogs.text", rollingInterval: RollingInterval.Day)
+    .MinimumLevel.Information()
+    //WriteTo.File("debugLog/villaLogs.text", rollingInterval: RollingInterval.Day)
     .WriteTo.Console(theme: AnsiConsoleTheme.Literate)
     .CreateLogger();
 
@@ -41,6 +43,8 @@ builder.Services.AddControllers(option =>
 //DI
 builder.Services.AddSingleton<IGenerationLogging, ConsoleLog>();
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
+builder.Services.AddScoped<IVillaService, VillaService>();
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

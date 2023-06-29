@@ -5,7 +5,9 @@ namespace MagicVilla.API.Logging.Interfaces
 {
 	public interface IGenerationLogging
 	{
-		public void Log(string mensage, LogLevelCustomLogEnum logLevelCustomLog);
+		public void Log(string mensage, LogLevel logLevel, string? responseResult = null);
+
+		public string FormatLogLevelMessage(LogLevel logLevel);
 	}
 }
 

@@ -40,6 +40,8 @@
     <None Remove="Repositories\Interfaces\" />
     <None Remove="Models\Response\" />
     <None Remove="Models\Response\Interface\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -55,5 +57,7 @@
     <Folder Include="Repositories\Interfaces\" />
     <Folder Include="Models\Response\" />
     <Folder Include="Models\Response\Interface\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 </Project>
