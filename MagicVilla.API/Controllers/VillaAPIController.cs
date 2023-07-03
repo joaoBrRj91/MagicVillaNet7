@@ -14,6 +14,7 @@ namespace MagicVilla.API.Controllers
         public VillaAPIController(IVillaService villaService) => this.villaService = villaService;
 
         [HttpGet]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         //[ProducesResponseType(StatusCodes.Status200OK,Type = typeof(IResponse))]
         public async Task<ActionResult<IResponse>> GetVillas()
         {
